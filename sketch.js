@@ -40,17 +40,7 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 
-	 rect1 = Bodies.rectangle(400, 640, 200, 20, {isStatic:true});
-	 rect1.shapeColor = "red";
-	 World.add(world, rect1);
 
-	 rect2 = Bodies.rectangle(300, 640, 20, 100, {isStatic:true});
-	 rect2.shapeColor = "red";
-	 World.add(world, rect2);
-
-	 rect3 = Bodies.rectangle(500, 640, 20, 100, {isStatic:true});
-	 rect3.shapeColor = "red";
-	 World.add(world, rect2);
 
 	Engine.run(engine);
   
