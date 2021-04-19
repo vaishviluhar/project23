@@ -4,17 +4,10 @@ class Ground {
       isStatic : true
     }
   
-    this.body = Bodies.rectangle(400, 640, 200, 20, {isStatic:true});
-    this.body.shapeColor = "red";
-    World.add(world, rect1);
-
-   this.body = Bodies.rectangle(300, 640, 20, 100, {isStatic:true});
-    this.body.shapeColor = "red";
-    World.add(world, rect2);
-
-    this.body = Bodies.rectangle(500, 640, 20, 100, {isStatic:true});
-    this.body.shapeColor = "red";
-    World.add(world, rect3);
+    this.body = Bodies.rectangle(x, y, width, height, options);
+    this.width = width;
+    this.height = height;
+    World.add(world, this.body);
   }
   
       display(){

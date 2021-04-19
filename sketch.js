@@ -17,32 +17,33 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 
-	rect1 = new Ground(400, 640, 200, 20);
-    rect2 = new Ground(300, 640, 20, 100);
-    rect3 = new Ground(500, 640, 20, 100);
-
+	
 	packageSprite=createSprite(width/2, 80, 10,10);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
-
+	
 	helicopterSprite=createSprite(width/2, 200, 10,10);
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
-
+	
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
-
-
+	
+	
 	engine = Engine.create();
 	world = engine.world;
-
+	
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1, isStatic:true});
 	World.add(world, packageBody);
 	
-
+	
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
- 	World.add(world, ground);
+	World.add(world, ground);
+	
+	rect1 = new Ground(400, 650, 200, 20);
+    rect2 = new Ground(300, 610, 20, 100);
+    rect3 = new Ground(500, 610, 20, 100);
 
 	Engine.run(engine);
   
